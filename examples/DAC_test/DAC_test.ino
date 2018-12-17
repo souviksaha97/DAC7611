@@ -45,6 +45,7 @@ void setup()
 {
   Serial.begin(9600);
   dac.begin();	//initialise DAC
+  Serial.println("Hello");  
 }
 
 void loop()
@@ -53,9 +54,9 @@ void loop()
   {
     dacVal = Serial.parseInt();
     dac.sendDAC(dacVal);	//send values to DAC
-    Serial.println("DAC Value is : " + dacVal);  
+    Serial.print("DAC Value is : ");  
+    Serial.println(dacVal);
   }
 
   delay(1000);
 }
-
