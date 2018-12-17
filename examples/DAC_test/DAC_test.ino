@@ -37,7 +37,7 @@ SOFTWARE.
 
 #include <DAC7611.h>
 
-DAC7611 dac(2,3,4,5,6);
+DAC7611 dac(2,3,4,5,6);  //CS - 2, CLK - 3, SDI - 4, LD - 5, CLR - 6
 
 int dacVal = 0;
 
