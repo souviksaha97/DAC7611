@@ -25,19 +25,16 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ===========================================================================*/
 
-//The DAC7611 is a 12-bit digital-to-analog converter
-//(DAC) with guaranteed 12-bit monotonicity performance over the industrial temperature range. 
-//It requires a single +5V supply and contains an input shift
-//register, latch, 2.435V reference, DAC, and high speed
-//rail-to-rail output amplifier. 
-
-//I have simplified the usage of the DAC7611. To operate the 
-//DAC, user has to initialise using begin() and send data 
-//sendDAC(int value)
+/**
+ * The DAC7611 is a 12-bit digital-to-analog converter (DAC) with guaranteed 12-bit monotonicity performance over the industrial temperature range. 
+ * It requires a single +5V supply and contains an input shift register, latch, 2.435V reference, DAC, and high speed rail-to-rail output amplifier. 
+ * I have simplified the usage of the DAC7611. To operate the DAC, user has to initialise using begin() and send data using sendDAC(int value).
+ * Measure the output voltage across the Vout and GND pin.
+*/
 
 #include <DAC7611.h>
 
-DAC7611 dac(2,3,4,5,6);  //CS - 2, CLK - 3, SDI - 4, LD - 5, CLR - 6
+DAC7611 dac(2,3,4,5,6);  //CS - D2, CLK - D3, SDI - D4, LD - D5, CLR - D6
 
 int dacVal = 0;
 
